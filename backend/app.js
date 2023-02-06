@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.APPID;
 
-app.get('/', async (req, res) => {
+app.get('/', async (_, res) => {
     res.send(`Response from the server ${port}`);
 });
 
