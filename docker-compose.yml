@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend1:
+     build: backend
+     environment:
+      - APPID=1111
+     ports:
+      - "1111:1111"
+  backend2:
+     build: backend
+     environment:
+      - APPID=2222
+     ports:
+      - "2222:2222"
+  backend3:
+     build: backend
+     environment:
+      - APPID=3333
+     ports:
+      - "3333:3333"
