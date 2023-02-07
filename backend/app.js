@@ -7,6 +7,18 @@ app.get('/', async (_, res) => {
     res.send(`Response from the server ${port}`);
 });
 
+app.get('/one', async (_, res) => {
+    res.send(`Response from the server ${port} - Page one says Hello!`);
+});
+
+app.get('/two', async (_, res) => {
+    res.send(`Response from the server ${port} - Page two says Hello!`);
+});
+
+app.get('/three', async (_, res) => {
+    res.send(`Response from the server ${port} - Page three says Hello!`);
+});
+
 app.listen(port, (err) => {
     if(err) {
         console.log(err);

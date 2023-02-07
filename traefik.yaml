@@ -5,5 +5,5 @@ entryPoints:
 
 providers:
   file: 
-    filename: conf-traefik.yaml
+    filename: split-config-traefik.yaml
     watch: true
