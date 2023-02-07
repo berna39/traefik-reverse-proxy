@@ -1,0 +1,18 @@
+http:
+  routers:
+    allBackendRouter:
+      rule: "Host(`localhost`)"
+      service: allbackends
+    adminblocker:
+      rule: "Host(`localhost`) && PATH(`/admin`)"
+      service: blackhole
+  services:
+    blackhole:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:3333"
+    allbackends:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:1111"
+          - url: "http://localhost:2222"

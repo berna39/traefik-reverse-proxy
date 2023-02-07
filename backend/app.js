@@ -19,6 +19,10 @@ app.get('/three', async (_, res) => {
     res.send(`Response from the server ${port} - Page three says Hello!`);
 });
 
+app.get('/admin', async (_, res) => {
+    res.send(`Response from the server ${port} - This is the admin page, only few people should see it`);
+});
+
 app.listen(port, (err) => {
     if(err) {
         console.log(err);
