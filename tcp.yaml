@@ -1,0 +1,12 @@
+tcp:
+  routers:
+    allBackendRouter:
+      rule: HostSNI(`*`)
+      service: allbackends
+  services:
+    allbackends:
+      loadBalancer:
+        servers:
+          - address: "terminator:1111"
+          - address: "terminato:2222"
+          - address: "terminator:3333"
