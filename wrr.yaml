@@ -1,0 +1,22 @@
+# Weighted round robin
+http:
+  routers:
+    router0:
+      service: wrr
+      rule: Host(`localhost`)
+  services:
+    wrr:
+      weighted:
+        services:
+          - name: backendone
+            weight: 4
+          - name: backendtwo
+            weight: 1
+    backendone:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:1111"
+    backendtwo:
+      loadBalancer:
+        servers:
+          - url: "http://localhost:2222"

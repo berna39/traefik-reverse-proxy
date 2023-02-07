@@ -6,5 +6,6 @@ entryPoints:
 providers:
   file: 
     # filename: split-config-traefik.yaml
-    filename: blocadmin-config-traefik.yaml
+    # filename: blocadmin-config-traefik.yaml
+    filename: wrr.yaml
     watch: true
